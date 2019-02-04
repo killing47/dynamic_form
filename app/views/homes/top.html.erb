@@ -1,0 +1,15 @@
+
+<p id="hoge">赤色になるよ</p>
+<%= form_with model: @post do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %><br/>
+  <%= f.label :comment%>
+  <%= f.text_field :comment %><br/>
+  <%#= render partial/%>
+  <%= f.submit 'Post'%>
+<% end %>
+
+<% @posts.each do |e| %>
+  <%= e.id %>
+<% end %>
+
